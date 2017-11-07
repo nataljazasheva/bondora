@@ -1,0 +1,46 @@
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius; 
+	-moz-border-radius: $radius; 
+	border-radius: $radius; 
+}
+
+@mixin appearance($val) {
+	-webkit-appearance: $val;
+    -moz-appearance: $val;
+    appearance: $val;
+}
+
+@mixin transform($val) {
+	-webkit-transform: $val;
+	-ms-transform: $val;
+	transform: $val;
+}
+
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flex_flow($dir, $wrap) {
+  flex-flow: $dir $wrap;
+  -webkit-flex-flow: $dir $wrap;
+  -moz-flex-flow: $dir $wrap;
+  -ms-flex-flow: $dir $wrap;
+}
+
+@mixin justify_content($val) {
+  justify-content: $val;
+  -webkit-justify-content: $val;
+  -moz-justify-content: $val;
+  -ms-justify-content: $val;
+}
+
+@mixin flex_grow($val) {
+  flex-grow: $val;
+  -webkit-flex-grow: $val;
+  -moz-flex-grow: $val;
+  -ms-flex-grow: $val;
+}

@@ -1,0 +1,403 @@
+@charset "UTF-8";
+/* Typography */
+h3 {
+  margin-top: 10px; }
+
+/* Base */
+body {
+  background-color: #f7fcff;
+  font-family: sans-serif;
+  font-weight: normal;
+  color: #74828B;
+  font-size: 14px;
+  padding: 0;
+  margin: 0; }
+  @media screen and (max-width: 479px) {
+    body {
+      background-color: #fff; } }
+
+.main {
+  position: relative; }
+  .main:after {
+    content: "";
+    background: url("/assets/img/bg.png") no-repeat;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1; }
+    @media screen and (max-width: 479px) {
+      .main:after {
+        top: 0;
+        left: -150px; } }
+
+.container {
+  max-width: 643px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  margin: 20px auto;
+  background-color: white;
+  opacity: 0.9; }
+  @media screen and (max-width: 479px) {
+    .container {
+      margin: 10px auto;
+      padding: 0 10px;
+      -webkit-border-radius: none;
+      -moz-border-radius: none;
+      border-radius: none;
+      box-shadow: none; } }
+
+.content_section {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 3px;
+  position: relative; }
+
+/* Helpers*/
+.float_right {
+  float: right; }
+
+.float_left {
+  float: left; }
+
+@media screen and (max-width: 479px) {
+  .hide_mobile {
+    display: none; } }
+
+.error_msg {
+  color: red; }
+
+/* Table */
+.container.wide {
+  max-width: 90%; }
+  .container.wide .big_table {
+    overflow-x: auto; }
+
+.table {
+  border-collapse: collapse;
+  border: none;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #74828B; }
+  .table:focus {
+    outline: none; }
+  .table tr:nth-of-type(odd) {
+    background: #f7fbfd; }
+  .table th {
+    background: #7EBAE0;
+    color: white;
+    font-weight: bold; }
+  .table td, .table th {
+    padding: 10px 5px;
+    text-align: left;
+    vertical-align: top;
+    width: 100px; }
+  .table thead tr {
+    display: block; }
+  .table tbody {
+    display: block;
+    height: 420px;
+    overflow: auto; }
+
+@media screen and (max-width: 479px) {
+  .table, thead, tbody, th, td, tr {
+    display: block; }
+  .table {
+    width: auto;
+    margin-top: 20px;
+    /* Label the data */ }
+    .table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px; }
+    .table tr:nth-of-type(odd) {
+      background: #f7fbfd; }
+    .table td {
+      border: none;
+      border-bottom: 1px solid #F0EEEF;
+      position: relative;
+      padding-left: 60%; }
+      .table td:before {
+        position: absolute;
+        top: 10px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap; }
+    .table td:nth-of-type(1):before {
+      content: "Investment"; }
+    .table td:nth-of-type(2):before {
+      content: "Country"; }
+    .table td:nth-of-type(3):before {
+      content: "Status"; }
+    .table td:nth-of-type(4):before {
+      content: "Bondora rating"; }
+    .table td:nth-of-type(5):before {
+      content: "Date of purchase"; }
+    .table td:nth-of-type(6):before {
+      content: "Interest"; }
+    .table td:nth-of-type(7):before {
+      content: "Next payment No"; }
+    .table td:nth-of-type(8):before {
+      content: "Outstanding principal"; }
+    .table td:nth-of-type(9):before {
+      content: "Repaid principal"; }
+    .table td:nth-of-type(10):before {
+      content: "Repaid interests late charges"; }
+    .table td:nth-of-type(11):before {
+      content: "Principal overdue"; }
+    .table td:nth-of-type(12):before {
+      content: "Accrued interest and late charges"; }
+    .table td:nth-of-type(13):before {
+      content: "Credit history"; }
+    .table td:nth-of-type(14):before {
+      content: "Investment amount"; }
+    .table td:nth-of-type(15):before {
+      content: "Purpose"; }
+    .table td:nth-of-type(16):before {
+      content: "Principal debt occurred"; }
+    .table td:nth-of-type(17):before {
+      content: "Interest debt occurred"; } }
+
+/* Sliders */
+.slider_container {
+  position: relative;
+  max-width: 500px;
+  margin: 0;
+  overflow: visible; }
+  .slider_container .slider {
+    padding-top: 50px; }
+  .slider_container .slider_scale {
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 20px; }
+  .slider_container .slider_tick_min,
+  .slider_container .slider_tick_max,
+  .slider_container .slider_tick {
+    display: inline-block;
+    width: 50px;
+    position: absolute;
+    top: 0px; }
+  .slider_container .slider_tick_min {
+    text-align: left;
+    left: 0px; }
+  .slider_container .slider_tick_max {
+    text-align: right;
+    right: 0px; }
+  .slider_container .slider_tick {
+    text-align: center;
+    margin-left: -25px; }
+  .slider_container .slider_range_min {
+    float: left; }
+  .slider_container .slider_range_max {
+    float: right; }
+  .slider_container.slider1 h3 {
+    float: left;
+    margin-top: 10px; }
+  .slider_container.slider1 .slider_value {
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .slider_container.slider2 h3 {
+    clear: all; }
+
+input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 62px;
+  height: 30px;
+  border: 2px solid #D3D3D3;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 2px 25px 2px 5px;
+  font-size: 16px;
+  text-align: right;
+  color: #74828B; }
+
+.input_wrapper {
+  position: relative; }
+  .input_wrapper:after {
+    content: "€";
+    position: absolute;
+    top: -2px;
+    right: 10px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    font-size: 16px; }
+  .input_wrapper.interest:after {
+    content: "%"; }
+
+.ui-slider {
+  position: relative;
+  margin: 10px 5px 10px 0px;
+  height: 3px;
+  max-width: 500px; }
+  .ui-slider .ui-slider-handle {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: -6px;
+    margin-left: 0px;
+    background-color: #7EBAE0;
+    border: none;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    z-index: 2;
+    outline: 0;
+    cursor: pointer .ui-slider .ui-slider-handle; }
+    .ui-slider .ui-slider-handle :focus {
+      outline: none !important; }
+  .ui-slider .ui-slider-range {
+    top: 0;
+    height: 100%;
+    margin-left: 0px; }
+  .ui-slider .ui-widget-header {
+    background: #7EBAE0; }
+
+.ui-widget-content {
+  border: none !important;
+  background: #F0EEEF; }
+
+.ui-corner-all {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px; }
+
+.remove {
+  color: red;
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+  cursor: pointer; }
+  @media screen and (max-width: 479px) {
+    .remove {
+      right: 10px;
+      bottom: -10px; } }
+
+/* Checkboxes */
+.checkbox_list_container {
+  position: relative;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  justify-content: space-between; }
+
+.checkbox_container {
+  position: relative;
+  text-align: center; }
+
+.middle_line {
+  width: 100%;
+  position: absolute;
+  top: 1px;
+  background: #F0EEEF;
+  height: 3px;
+  border: none; }
+
+.styled_checkbox {
+  position: absolute;
+  opacity: 0; }
+  .styled_checkbox + label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0; }
+  .styled_checkbox + label:before {
+    content: '';
+    margin-bottom: 14px;
+    display: block;
+    vertical-align: text-top;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: 3px solid #F0EEEF;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px; }
+  .styled_checkbox:checked + label:before {
+    margin-top: -6px;
+    margin-bottom: 12px;
+    background: #9AE02C;
+    border: 7px solid #9AE02C; }
+  .styled_checkbox:checked + label:after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 11px;
+    position: absolute;
+    left: 10px;
+    top: -1px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+
+@media screen and (max-width: 479px) {
+  .checkbox_list_container {
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap; }
+  .checkbox_container {
+    width: 25%;
+    margin-top: 10px;
+    text-align: left; }
+  .middle_line {
+    display: none; }
+  .styled_checkbox + label:before {
+    display: inline-block !important;
+    margin-right: 10px;
+    margin-left: 2px; }
+  .styled_checkbox:checked + label:before {
+    margin-left: 0px; } }
+
+/*
+@include mobile {
+  .checkbox_list_container {
+    @include flex_flow(column, nowrap); 
+  }
+
+  .checkbox_container {
+    width: 33%; 
+    margin-top: 10px; 
+    text-align: left;
+  } 
+
+  .middle_line {
+    width: 4px; 
+    height:90%; 
+    left: 10px; 
+    margin-top: 10px; 
+  }
+
+  .styled_checkbox {
+    & + label:before {
+      display: inline-block !important;  
+      margin-right: 10px;
+      margin-left: 2px;  
+    }
+
+    &:checked + label:before {
+     margin-left: 0px; 
+    }
+  }
+}
+*/

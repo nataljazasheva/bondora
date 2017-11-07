@@ -1,0 +1,106 @@
+/* Table */
+.container.wide {
+	max-width: $content_wide; 
+
+	.big_table {
+		overflow-x: auto;
+	}
+}
+
+.table { 
+	border-collapse: collapse; 
+	border: none;
+	margin-top: 20px; 
+	font-size: 12px; 
+	color: $color_text; 
+
+	&:focus {
+		outline: none;
+	}
+
+	tr:nth-of-type(odd) { 
+		background: $grey_light;
+	}
+
+	th { 
+		background: $blue;
+		color: white;
+		font-weight: bold; 
+	}
+
+	td, th { 
+		padding: 10px 5px; 
+		text-align: left; 
+		vertical-align: top; 
+		width: 100px;
+	}
+
+	
+	thead tr {
+	    display: block;
+	}
+	
+	tbody {
+		display: block;
+		height: $table_hight;
+		overflow: auto;
+	}
+}
+
+@include mobile {
+	.table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+
+	.table {
+		width: auto; 
+		margin-top: 20px; 
+
+		thead tr { 
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+		
+		tr { 
+			&:nth-of-type(odd) { 
+			  background: $grey_light;
+			}
+		}
+
+		td { 
+			border: none;
+			border-bottom: 1px solid $grey; 
+			position: relative;
+			padding-left: 60%; 
+			
+			&:before { 
+				position: absolute;
+				top: 10px;
+				left: 6px;
+				width: 45%; 
+				padding-right: 10px; 
+				white-space: nowrap;
+			}
+		}
+
+		/* Label the data */
+		td:nth-of-type(1):before { content: "Investment"; }
+		td:nth-of-type(2):before { content: "Country"; }
+		td:nth-of-type(3):before { content: "Status"; }
+		td:nth-of-type(4):before { content: "Bondora rating"; }
+		td:nth-of-type(5):before { content: "Date of purchase"; }
+		td:nth-of-type(6):before { content: "Interest"; }
+		td:nth-of-type(7):before { content: "Next payment No"; }
+		td:nth-of-type(8):before { content: "Outstanding principal"; }
+		td:nth-of-type(9):before { content: "Repaid principal"; }
+		td:nth-of-type(10):before { content: "Repaid interests late charges"; }
+		td:nth-of-type(11):before { content: "Principal overdue"; }
+		td:nth-of-type(12):before { content: "Accrued interest and late charges"; }
+		td:nth-of-type(13):before { content: "Credit history"; }
+		td:nth-of-type(14):before { content: "Investment amount"; }
+		td:nth-of-type(15):before { content: "Purpose"; }
+		td:nth-of-type(16):before { content: "Principal debt occurred"; }
+		td:nth-of-type(17):before { content: "Interest debt occurred"; }
+	}
+}

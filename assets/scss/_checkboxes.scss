@@ -1,0 +1,127 @@
+/* Checkboxes */
+.checkbox_list_container {
+  position: relative; 
+  margin-top: 20px; 
+  @include flexbox();
+  @include flex_flow(row, nowrap);
+  justify-content: space-between;
+}
+
+.checkbox_container {
+  position: relative; 
+  text-align: center; 
+} 
+
+.middle_line {
+  width: 100%; 
+  position: absolute;
+  top: 1px;  
+  background: $grey;
+  height: 3px; 
+  border: none;   
+}
+
+.styled_checkbox {
+  position: absolute; 
+  opacity: 0;
+
+  & + label {
+    position: relative;
+    display: inline-block; 
+    cursor: pointer;
+    padding: 0;
+  }
+
+  & + label:before {
+    content: '';
+    margin-bottom: 14px; 
+    display: block;
+    vertical-align: text-top;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: 3px solid $grey; 
+    @include border-radius(20px);
+  }
+
+  &:checked + label:before {
+    margin-top: -6px; 
+    margin-bottom: 12px; 
+    background: $green;
+    border: 7px solid $green; 
+  }
+  
+  &:checked + label:after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 11px;
+    position: absolute;
+    left: 10px;
+    top: -1px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    @include transform(rotate(45deg));
+  }
+}
+
+@include mobile {
+  .checkbox_list_container {
+    @include flex_flow(row, wrap);
+  }
+
+  .checkbox_container {
+    width: 25%; 
+    margin-top: 10px; 
+    text-align: left;
+  } 
+
+  .middle_line {
+    display: none;  
+  }
+
+  .styled_checkbox {
+    & + label:before {
+      display: inline-block !important;  
+      margin-right: 10px;
+      margin-left: 2px;  
+    }
+
+    &:checked + label:before {
+     margin-left: 0px; 
+    }
+  }
+}
+
+/*
+@include mobile {
+  .checkbox_list_container {
+    @include flex_flow(column, nowrap); 
+  }
+
+  .checkbox_container {
+    width: 33%; 
+    margin-top: 10px; 
+    text-align: left;
+  } 
+
+  .middle_line {
+    width: 4px; 
+    height:90%; 
+    left: 10px; 
+    margin-top: 10px; 
+  }
+
+  .styled_checkbox {
+    & + label:before {
+      display: inline-block !important;  
+      margin-right: 10px;
+      margin-left: 2px;  
+    }
+
+    &:checked + label:before {
+     margin-left: 0px; 
+    }
+  }
+}
+*/

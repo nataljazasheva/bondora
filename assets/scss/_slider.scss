@@ -1,0 +1,158 @@
+/* Sliders */
+.slider_container {
+	position: relative; 
+	max-width: 500px; 
+	margin: 0; 
+	overflow: visible;
+
+	.slider {
+		padding-top: 50px; 
+	}
+
+	.slider_scale {
+		margin-top: 20px; 
+		overflow: hidden;
+		position: relative; 
+		height: 20px; 
+	}
+
+	.slider_tick_min, 
+	.slider_tick_max, 
+	.slider_tick {
+		display: inline-block;
+		width: 50px;
+		position: absolute; 
+		top: 0px; 
+	}
+
+	.slider_tick_min {
+		text-align: left; 
+		left: 0px; 
+	}
+	 
+	.slider_tick_max {
+		text-align: right;
+		right: 0px;  
+	}
+
+	.slider_tick {
+		text-align: center;
+		margin-left: -25px; 
+	}
+
+	.slider_range_min {
+		float: left;  
+	}
+
+	.slider_range_max {
+		float: right;
+	}
+	
+	&.slider1 {
+		h3 {
+			float: left; 
+			margin-top: 10px; 
+		}
+
+		.slider_value {
+			position: absolute; 
+			top: 0; 
+			right: 0; 
+		}
+	}
+
+	&.slider2 {
+		h3 {
+			clear: all; 
+		}
+	}
+}
+
+input[type="text"] {
+	@include appearance(none);
+	width: 62px; 
+	height: 30px; 
+	border: 2px solid $grey_dark;
+	@include border-radius(3px);  
+	padding: 2px 25px 2px 5px;
+	font-size: 16px;
+	text-align: right;  
+	color: $color_text; 
+}
+
+.input_wrapper {
+	position: relative; 
+
+	&:after {
+		content: "€";
+		position: absolute;
+		top: -2px; 
+		right: 10px; 
+		display: block;
+		width: 10px; 
+		height: 10px;  
+		font-size: 16px;  
+	} 
+
+	&.interest:after {
+		content: "%";
+	}
+}
+
+.ui-slider {
+	position: relative;
+	margin: 10px 5px 10px 0px;   
+	height: 3px; 
+	max-width: 500px; 
+
+	.ui-slider-handle {
+		width: 16px;  
+		height: 16px; 
+		position: absolute;
+		top: -6px;
+		margin-left: 0px;
+		background-color: $blue;
+		border: none;  
+		@include border-radius(30px); 
+		z-index: 2;
+		outline: 0; 
+		cursor: pointer
+		
+		&:focus {
+			outline: none !important; 
+		}
+	}
+
+	.ui-slider-range {
+		top: 0;
+		height: 100%;
+		margin-left: 0px; 
+	}
+
+	.ui-widget-header { 
+		background: $blue;
+	}	
+}
+
+.ui-widget-content { 
+	border: none !important;
+	background: $grey;
+}
+
+.ui-corner-all {
+	@include border-radius(6px);
+}
+
+.remove {
+	color: red;
+	position: absolute; 
+	bottom: 40px; 
+	right: 20px; 
+	cursor: pointer; 
+
+	@include mobile {
+		right: 10px; 
+		bottom: -10px; 
+	}
+}
+
